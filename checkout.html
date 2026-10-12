@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Love at First Bite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">🍴 Love at First Bite</a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Cart 🛒 <span id="cartCount" class="cart-count">0</span></a>
+            <a href="tracking.html">Track Order</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="page-hero">
+        <h1>Checkout</h1>
+        <p>Enter your delivery details to place your demo order.</p>
+    </section>
+
+    <section class="page-layout">
+        <form id="checkoutForm" class="panel">
+            <h2>Delivery Information</h2>
+
+            <div class="form-grid">
+                <div class="form-group full">
+                    <label for="customerName">Full Name</label>
+                    <input class="form-control" id="customerName" required autocomplete="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group full">
+                    <label for="customerPhone">Phone Number</label>
+                    <input class="form-control" id="customerPhone" type="tel" required autocomplete="tel" pattern="[0-9+() -]{7,20}" placeholder="Enter phone number">
+                </div>
+
+                <div class="form-group full">
+                    <label for="customerAddress">Delivery Address</label>
+                    <textarea class="form-control" id="customerAddress" required autocomplete="street-address" placeholder="House number, street, city"></textarea>
+                </div>
+
+                <div class="form-group full">
+                    <label for="instructions">Delivery Instructions (optional)</label>
+                    <textarea class="form-control" id="instructions" placeholder="Any special instructions?"></textarea>
+                </div>
+            </div>
+
+            <h2>Payment Method</h2>
+            <div class="payment-options">
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="Cash on Delivery" checked>
+                    Cash on Delivery
+                </label>
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="Demo Online Payment">
+                    Demo Online Payment
+                </label>
+            </div>
+
+            <p class="notice" style="margin-top:18px">
+                This is a demonstration checkout. No real payment will be taken.
+            </p>
+
+            <button class="btn" type="submit">Place Demo Order</button>
+        </form>
+
+        <aside class="panel summary">
+            <h2>Your Order</h2>
+            <div id="checkoutItems"></div>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="checkoutSubtotal">₹0.00</strong>
+            </div>
+            <div class="summary-row">
+                <span>Delivery Fee</span>
+                <strong id="checkoutDelivery">₹0.00</strong>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span>
+                <strong id="checkoutTotal">₹0.00</strong>
+            </div>
+        </aside>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <a class="logo" href="index.html">🍴 Love at First Bite</a>
+        <p>© 2026 Love at First Bite. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

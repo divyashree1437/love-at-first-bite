@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Love at First Bite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">🍴 Love at First Bite</a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a class="active" href="menu.html">Menu</a>
+            <a href="cart.html">Cart 🛒 <span id="cartCount" class="cart-count">0</span></a>
+            <a href="tracking.html">Track Order</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="page-hero">
+        <span class="eyebrow">Find your favourite</span>
+        <h1>Explore Our Menu 🍕</h1>
+        <p>Delicious food for every mood, prepared with love.</p>
+
+        <form id="searchForm" class="search-box">
+            <input
+                type="search"
+                id="foodSearch"
+                placeholder="Search pizza, burger, biryani..."
+                aria-label="Search food">
+            <button class="btn" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </button>
+        </form>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <h2>Explore Categories</h2>
+        </div>
+
+        <div class="categories">
+            <button type="button" class="category-btn active" data-category="All">🍽️ All</button>
+            <button type="button" class="category-btn" data-category="Pizza">🍕 Pizza</button>
+            <button type="button" class="category-btn" data-category="Burger">🍔 Burgers</button>
+            <button type="button" class="category-btn" data-category="Biryani">🍛 Biryani</button>
+            <button type="button" class="category-btn" data-category="Noodles">🍜 Noodles</button>
+            <button type="button" class="category-btn" data-category="Chicken">🍗 Chicken</button>
+            <button type="button" class="category-btn" data-category="Healthy Food">🥗 Healthy Food</button>
+            <button type="button" class="category-btn" data-category="Dessert">🍰 Desserts</button>
+            <button type="button" class="category-btn" data-category="Drinks">🥤 Drinks</button>
+        </div>
+
+        <div class="section-top section-heading">
+            <h2>Our Favourite Dishes</h2>
+            <span id="foodCount">16 dishes</span>
+        </div>
+
+        <div id="foodContainer" class="food-grid"></div>
+        <p id="globalMessage" class="message" hidden></p>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <a class="logo" href="index.html">🍴 Love at First Bite</a>
+        <p>© 2026 Love at First Bite. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

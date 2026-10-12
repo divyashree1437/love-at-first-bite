@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order | Love at First Bite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">🍴 Love at First Bite</a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Cart 🛒 <span id="cartCount" class="cart-count">0</span></a>
+            <a class="active" href="tracking.html">Track Order</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="auth-wrap">
+        <div class="section-heading" style="text-align:center">
+            <span class="eyebrow">Stay updated</span>
+            <h1>Track Your Order</h1>
+            <p>Enter the order number generated at demo checkout.</p>
+        </div>
+
+        <div class="panel">
+            <form id="trackingForm">
+                <div class="form-group">
+                    <label for="orderNumber">Order Number</label>
+                    <input class="form-control" id="orderNumber" required placeholder="Example: LFB12345678">
+                </div>
+
+                <button class="btn" type="submit" style="width:100%">Find My Order</button>
+            </form>
+
+            <p id="trackingMessage" class="message" role="status"></p>
+
+            <div id="trackingResult" hidden style="margin-top:25px">
+                <h2>Order Details</h2>
+                <p>Order Number: <strong id="trackingOrderNumber"></strong></p>
+                <p>Customer: <strong id="trackingCustomer"></strong></p>
+                <p>Total: <strong id="trackingAmount"></strong></p>
+                <p>Status: <strong id="trackingStatus">Order Placed</strong></p>
+
+                <div class="tracking-progress">
+                    <div class="progress-step active completed" data-step="0">
+                        <div class="progress-dot"><i class="fa-solid fa-check"></i></div>
+                        Order Placed
+                    </div>
+                    <div class="progress-step" data-step="1">
+                        <div class="progress-dot">2</div>
+                        Preparing
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="progress-dot">3</div>
+                        On the Way
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="progress-dot">4</div>
+                        Delivered
+                    </div>
+                </div>
+
+                <p class="muted">This is a demo tracking page. It does not connect to a real delivery service.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <a class="logo" href="index.html">🍴 Love at First Bite</a>
+        <p>© 2026 Love at First Bite. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

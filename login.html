@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Love at First Bite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">🍴 Love at First Bite</a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Cart 🛒 <span id="cartCount" class="cart-count">0</span></a>
+            <a href="tracking.html">Track Order</a>
+            <a class="active" href="login.html">Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="auth-wrap">
+        <div class="section-heading" style="text-align:center">
+            <span class="eyebrow">Welcome back</span>
+            <h1>Good Food Is Calling!</h1>
+            <p>Log in or create an account to continue.</p>
+        </div>
+
+        <div class="panel">
+            <div class="auth-tabs">
+                <button id="showLogin" class="active" type="button">Login</button>
+                <button id="showRegister" type="button">Register</button>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input class="form-control" id="loginEmail" type="email" required autocomplete="email" placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input class="form-control" id="loginPassword" type="password" required autocomplete="current-password" placeholder="Enter password">
+                </div>
+
+                <button class="btn" style="width:100%" type="submit">Login</button>
+            </form>
+
+            <form id="registerForm" hidden>
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input class="form-control" id="registerName" required autocomplete="name" placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="registerEmail">Email Address</label>
+                    <input class="form-control" id="registerEmail" type="email" required autocomplete="email" placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="registerPassword">Create Password</label>
+                    <input class="form-control" id="registerPassword" type="password" minlength="6" required autocomplete="new-password" placeholder="At least 6 characters">
+                </div>
+
+                <button class="btn" style="width:100%" type="submit">Create Account</button>
+            </form>
+
+            <p id="loginMessage" class="message" role="status"></p>
+            <p class="muted" style="font-size:12px;margin-top:15px">
+                Demo only: do not use a real password. Account details are stored in this browser.
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <a class="logo" href="index.html">🍴 Love at First Bite</a>
+        <p>© 2026 Love at First Bite. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

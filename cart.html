@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Love at First Bite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">🍴 Love at First Bite</a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a class="active" href="cart.html">Cart 🛒 <span id="cartCount" class="cart-count">0</span></a>
+            <a href="tracking.html">Track Order</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="page-hero">
+        <h1>Your Shopping Cart 🛒</h1>
+        <p>Review your delicious selections before checkout.</p>
+    </section>
+
+    <section class="page-layout">
+        <div>
+            <div id="cartItems" class="cart-list"></div>
+            <p style="margin-top:20px">
+                <a class="btn secondary" href="menu.html">
+                    <i class="fa-solid fa-arrow-left"></i> Continue Shopping
+                </a>
+            </p>
+        </div>
+
+        <aside class="panel summary">
+            <h2>Order Summary</h2>
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">₹0.00</strong>
+            </div>
+            <div class="summary-row">
+                <span>Delivery Fee</span>
+                <strong id="deliveryFee">₹0.00</strong>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span>
+                <strong id="cartTotal">₹0.00</strong>
+            </div>
+            <a class="btn" id="checkoutBtn" href="checkout.html">Proceed to Checkout</a>
+        </aside>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <a class="logo" href="index.html">🍴 Love at First Bite</a>
+        <p>© 2026 Love at First Bite. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
